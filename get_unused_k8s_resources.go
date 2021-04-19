@@ -94,8 +94,8 @@ func main() {
 						}
 					}
 					if envvarSecretRef := envvarRef.SecretKeyRef; envvarSecretRef != nil {
-						if _, ok := configmaps_map[envvarSecretRef.Name]; ok {
-							delete(configmaps_map, envvarSecretRef.Name)
+						if _, ok := secrets_map[envvarSecretRef.Name]; ok {
+							delete(secrets_map, envvarSecretRef.Name)
 						}
 					}
 				}
